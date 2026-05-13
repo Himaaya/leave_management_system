@@ -1,4 +1,11 @@
-/* ===== RESET ===== */
+
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,44 +13,86 @@
   font-family: Arial, sans-serif;
 }
 
-html, body, #root {
-  width: 100%;
-  height: 100%;
-}
-
 body {
   background: #f4f6f9;
-  color: #333;
 }
 
-/* ===== MAIN CONTAINER (FIX SIDE LINES) ===== */
+
+
+
 .main-container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  min-height: 100vh;
+  padding: 20px 0;
 }
 
 
-/* ===== PAGE TITLE ===== */
+
 h2 {
   text-align: center;
-  margin: 10px 0 20px;
-  font-size: 44px;
-  font-weight: 600;
-  color: #2d3748;
+  margin-bottom: 25px;
+  color: #1e293b;
+  font-size: 38px;
 }
 
 
-/* ===== BUTTON GLOBAL ===== */
-button {
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 14px;
-  font-weight: bold;
-  background: #2d6cdf;
+
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.dash-card {
+  width: 220px;
+  padding: 25px;
+  border-radius: 14px;
   color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dash-card span {
+  font-size: 32px;
+}
+
+.total {
+  background: #1e293b;
+}
+
+.pending {
+  background: #f59e0b;
+}
+
+.approved {
+  background: #16a34a;
+}
+
+
+.apply-btn {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+
+button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background: #2563eb;
+  font-weight: bold;
   transition: 0.3s;
 }
 
@@ -52,66 +101,21 @@ button:hover {
 }
 
 
-/* ===== APPLY BUTTON ===== */
-button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  font-size: 14px;
-}
-
-
-/* ===== DASHBOARD ===== */
-.dashboard {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px auto;
-  flex-wrap: wrap;
-}
-
-.dash-card {
-  width: 180px;
-  padding: 18px;
-  border-radius: 12px;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.dash-card.total {
-  background: #2d3748;
-}
-
-.dash-card.pending {
-  background: #f59e0b;
-}
-
-.dash-card.approved {
-  background: #16a34a;
-}
-
-
-/* ===== CARD CONTAINER ===== */
 .card-container {
   display: flex;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
 }
 
 
-/* ===== LEAVE CARD ===== */
 .card {
-  background: white;
   width: 260px;
-  padding: 18px;
+  background: white;
+  padding: 20px;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
   transition: 0.3s;
 }
 
@@ -120,112 +124,109 @@ button {
 }
 
 
-/* ===== IMAGE ===== */
+
 .card img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
 
-/* ===== STATUS ===== */
+
+
+.card h3 {
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.card p {
+  margin-bottom: 6px;
+}
+
+
+
 .card .pending {
   color: #f59e0b;
-  font-weight: bold;
+  background: none;
 }
 
 .card .approved {
   color: #16a34a;
-  font-weight: bold;
+  background: none;
 }
 
 
-/* ===== CARD BUTTONS ===== */
+
 .card-buttons {
   display: flex;
-  gap: 6px;
-  justify-content: center;
-  margin-top: 12px;
+  gap: 8px;
+  margin-top: 15px;
 }
 
 .card-buttons button {
   flex: 1;
   font-size: 12px;
-  padding: 6px;
 }
 
 
-/* Edit */
 .card-buttons button:nth-child(1) {
   background: #f59e0b;
 }
 
-/* Delete */
+
 .card-buttons button:nth-child(2) {
   background: #ef4444;
 }
 
-/* Toggle */
+
 .card-buttons button:nth-child(3) {
   background: #6366f1;
 }
 
 
-/* ===== FORM PAGE ===== */
+
 .form-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
 }
 
-.form-page h2 {
-  margin-bottom: 15px;
-  font-size: 22px;
-  color: #2d3748;
-}
-
-
-/* ===== FORM ===== */
 form {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  gap: 12px;
+  width: 350px;
   background: white;
   padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-form input,
-form select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
   outline: none;
 }
 
-form input:focus,
-form select:focus {
-  border-color: #2d6cdf;
+input:focus {
+  border-color: #2563eb;
 }
 
 
-/* ===== FORM BUTTONS ===== */
-form button {
-  width: 100%;
-}
 
-/* Back Button */
-form button:last-child {
+
+.back-btn {
   background: #ef4444;
 }
 
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
+
   .dashboard {
     flex-direction: column;
     align-items: center;
@@ -236,11 +237,11 @@ form button:last-child {
     align-items: center;
   }
 
-  .card {
+  form {
     width: 90%;
   }
 
-  form {
+  .card {
     width: 90%;
   }
 }
